@@ -46,3 +46,6 @@ test   <- subset(dados, sample == FALSE)
 # exportando os dados em .csv
 write_csv(train,"train.csv")
 write_csv(test,"test.csv")
+
+colnames(dados) <- c("texto","classificacao")
+write_csv(dados,"dados.csv")
