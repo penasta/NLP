@@ -1,0 +1,91 @@
+[project]
+name = "nlp_stf"
+
+version = "0.1.0"
+
+description = "Pacotes utilizados para função NLP - STF"
+
+license.text = "MIT"
+
+authors = [
+
+    "Bruno Gondim Toledo <brunogtoledo96@gmail.com>",
+    "Arthur Gonçalves de Souza <arthurgo.souza@gmail.com>",
+]
+
+#maintainers = [
+#    "John Smith <johnsmith@example.org>",
+#    "Jane Smith <janesmith@example.org>",
+#]
+
+# readme = "README.md"
+
+# homepage = "https://python-poetry.org/"
+
+# documentation = "https://python-poetry.org/docs/"
+
+keywords = ["nlp", "stf"]
+
+#classifiers = [
+#    "Topic :: Software Development :: Build Tools",
+#    "Topic :: Software Development :: Libraries :: Python Modules"
+#]
+
+packages = [
+    { include = "nltk" },
+    { include = "unidecode" },
+    { include = "os" },
+    { include = "re" },
+    { include = "sklearn" },
+    { include = "numpy", format = "np" },
+    { include = "pandas", format = "pd" },
+    { include = "matplotlib.pyplot", format = "plt" },
+    { include = "stopwords", from = "nltk.corpus" },
+    { include = "PorterStemmer", from = "nltk.stem" },
+    { include = "feature_extraction", from = "sklearn" },
+    { include = "linear_model", from = "sklearn" },
+    { include = "model_selection", from = "sklearn" },
+    { include = "preprocessing", from = "sklearn" },
+    { include = "LogisticRegression", from = "sklearn.linear_model" },
+    { include = "DummyClassifier", from = "sklearn.dummy" },
+    { include = "TfidfVectorizer", from = "sklearn.feature_extraction.text" },
+    { include = "cross_val_score", from = "sklearn.model_selection" },
+    { include = "GridSearchCV", from = "sklearn.model_selection" },
+    { include = "CalibratedClassifierCV", from = "sklearn.calibration" },
+    { include = "SelectKBest", from = "sklearn.feature_selection" },
+    { include = "chi2", from = "sklearn.feature_selection" },
+    { include = "Pipeline", from = "sklearn.pipeline" },
+    { include = "CountVectorizer", from = "sklearn.feature_extraction.text" },
+    { include = "RandomForestClassifier", from = "sklearn.ensemble" },
+    { include = "confusion_matrix", from = "sklearn.metrics" },
+    { include = "train_test_split", from = "sklearn.model_selection" },
+    { include = "XGBClassifier", from = "xgboost" },
+    { include = "CatBoostClassifier", from = "catboost" },
+    { include = "Pool", from = "catboost" },
+    { include = "GradientBoostingClassifier", from = "sklearn.ensemble" },
+    { include = "svm", from = "sklearn" },
+    { include = "GaussianNB", from = "sklearn.naive_bayes" },
+    { include = "MultinomialNB", from = "sklearn.naive_bayes" },
+    { include = "ComplementNB", from = "sklearn.naive_bayes" },
+    { include = "classification_report", from = "sklearn.metrics" },
+    { include = "accuracy_score", from = "sklearn.metrics" },
+]
+
+requires-python = ">= 3.7"
+
+#include = [
+#    { path = "tests", format = "sdist" },
+#    { path = "for_wheel.txt", format = ["sdist", "wheel"] }
+#]
+
+# exclude = ["my_package/excluded.py"]
+
+#requests = "^2.13.0"
+
+#[[tool.poetry.source]]
+#name = "private"
+#url = "http://example.com/simple"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
